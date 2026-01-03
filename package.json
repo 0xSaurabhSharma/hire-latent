@@ -1,0 +1,20 @@
+{
+  "name": "hire-latent",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "client"
+  ],
+  "scripts": {
+    "build": "bun run --filter client build",
+    "start": "bun run --filter backend start",
+    "dev": "bun run --filter backend dev",
+    "dev:all": "bun run --filter backend dev && bun run --filter client dev"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

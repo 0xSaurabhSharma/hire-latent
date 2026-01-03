@@ -4,7 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun --watch src/server.js"
+    "dev": "bun --watch src/server.js",
+    "start": "bun src/server.js"
   },
   "devDependencies": {
     "@types/bun": "latest"
