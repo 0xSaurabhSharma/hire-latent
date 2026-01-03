@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { SignedIn, SignedOut, SignIn, SignInButton, SignOutButton, UserButton } from '@clerk/clerk-react'
+import { SignedIn, SignedOut, SignInButton, SignOutButton, UserButton } from '@clerk/clerk-react'
 
 function App() {
   const [count, setCount] = useState(0)

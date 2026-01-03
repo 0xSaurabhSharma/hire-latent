@@ -13,6 +13,7 @@ export const connectDB = async (params) => {
     console.log('Connection established with : ',conn.connection.host)
   } catch (error) {
     console.error('Error in connecting with DB : ', error)
-    process.exit(1)
+    // process.exit(1)
+    throw error
   }
 }

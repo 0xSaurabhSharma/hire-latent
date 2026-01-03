@@ -3,6 +3,7 @@ import path from 'path'
 import { ENV } from './lib/env.js'
 import { connectDB } from './lib/db.js'
 
+const port = ENV.PORT || 3000
 const app = express()
 
 const __dirname = path.resolve()
@@ -29,9 +30,10 @@ if (ENV.NODE_ENV == 'production') {
 const startServer = async () => {
   try {
     await connectDB()
-    app.listen(ENV.PORT, ()=> console.log(`I am alive : ${ENV.PORT}!!!`))
+    app.listen(port, ()=> console.log(`I am alive : ${port}!!!`))
   } catch (error) {
-    console.error('Error in starting the server: ',error)
+    console.error('Error in starting the server: ', error)
+    process.exit(1)
   }
 }
 startServer()
